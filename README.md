@@ -1,3 +1,3 @@
 Segunta Tarea de Diseno Digital Trabajo en Grupo    
--Jose Ferra
+-Jose Ferrera
 -Tristian Pineda
