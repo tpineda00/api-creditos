@@ -1,8 +1,8 @@
-const solicitudes = require("../models/solicitudes");
-const { v4: uuidv4 } = require("uuid");
+import solicitudes from "../models/solicitudes.js";
+import { v4 as uuidv4 } from "uuid";
 
 // Crear una solicitud
-exports.crear = (req, res) => {
+export const crear = (req, res) => {
     const nuevaSolicitud = {
         id: uuidv4(),
         dniCliente: req.body.dniCliente,
@@ -20,7 +20,7 @@ exports.crear = (req, res) => {
 };
 
 // Obtener todas las solicitudes
-exports.obtenerTodas = (req, res) => {
+export const obtenerTodas = (req, res) => {
     const { estado } = req.query;
 
     if (estado) {
@@ -35,7 +35,7 @@ exports.obtenerTodas = (req, res) => {
 };
 
 // Obtener una solicitud por ID
-exports.obtenerPorId = (req, res) => {
+export const obtenerPorId = (req, res) => {
     const solicitud = solicitudes.find(
         solicitud => solicitud.id === req.params.id
     );
@@ -50,7 +50,7 @@ exports.obtenerPorId = (req, res) => {
 };
 
 // Actualizar una solicitud
-exports.actualizar = (req, res) => {
+export const actualizar = (req, res) => {
     const solicitud = solicitudes.find(
         solicitud => solicitud.id === req.params.id
     );
@@ -75,7 +75,7 @@ exports.actualizar = (req, res) => {
 };
 
 // Cambiar estado
-exports.cambiarEstado = (req, res) => {
+export const cambiarEstado = (req, res) => {
     const solicitud = solicitudes.find(
         solicitud => solicitud.id === req.params.id
     );
@@ -92,7 +92,7 @@ exports.cambiarEstado = (req, res) => {
 };
 
 // Eliminar una solicitud
-exports.eliminar = (req, res) => {
+export const eliminar = (req, res) => {
     const index = solicitudes.findIndex(
         solicitud => solicitud.id === req.params.id
     );

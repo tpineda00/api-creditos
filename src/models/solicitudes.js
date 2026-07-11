@@ -1,4 +1,3 @@
-export const solicitudes = []
+const solicitudes = [];
 
-
-
+export default solicitudes;

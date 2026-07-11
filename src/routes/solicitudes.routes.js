@@ -1,15 +1,15 @@
-const express = require("express");
-const router = express.Router();
+import express from "express";
+import * as solicitudesController from "../controllers/solicitudes.controller.js";
 
-const solicitudesController = require("../controllers/solicitudes.controller");
-
-// Middlewares y esquemas (los desarrollará la Persona 2)
-const validate = require("../middlewares/validate");
-const {
+// Middlewares y esquemas
+import validate from "../middlewares/validate.js";
+import {
     crearSolicitudSchema,
     actualizarSolicitudSchema,
     estadoSchema
-} = require("../schemas/solicitud.schema");
+} from "../schemas/solicitud.schema.js";
+
+const router = express.Router();
 
 // Crear una solicitud
 router.post(
@@ -50,4 +50,4 @@ router.delete(
     solicitudesController.eliminar
 );
 
-module.exports = router;
+export default router;
