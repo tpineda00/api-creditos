@@ -1,6 +1,6 @@
-import {z} from 'zod'
+import * as z from 'zod'
 
-export const solicitudSchema = z.object({
+ export const solicitudSchema = z.object({
     dniCliente: z.string().min(13,{message: "El DNI tiene que tener entre 13  a 15 caracteres"}).max(15, {message: "El DNI tiene que tener entre 13  a 15 caracteres"}),
     nombreCompleto: z.string().min(5, {message: "El nombre completo debe contener al menos 5 caracteres"})
         .max(100,{mesage:" El nombre completo no puede exceederse de los 100 caracteres"}),
@@ -13,8 +13,9 @@ export const solicitudSchema = z.object({
 }).strict()
 
 //Validacion para el cambio de estado en el Patch
-export const cambioEstadoSchema = z.object({
+ export const cambioEstadoSchema = z.object({
     estado: z.enum(["APROBADA","RECHAZADA"],{
         errorMap: ()=> ({ message: "El estaod solo puede ser 'APROBADA' o 'RECHAZADA' "})
     })
 }).strict()
+
