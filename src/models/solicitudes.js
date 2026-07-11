@@ -1,4 +1,4 @@
-const solicitudes = []
+export const solicitudes = []
 
-module.exports = solicitudes
+
 
