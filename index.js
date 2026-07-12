@@ -1,7 +1,7 @@
 import express from "express"
 import solicitudRoutes from './routes/solicitudes.routes.js'
 
-import { requestLogger, errorHandler } from './middlewares/global.middleware.js'
+import { requestLogger, errorHandler } from './middleware/global.middleware.js'
 
 const app = express()
 
