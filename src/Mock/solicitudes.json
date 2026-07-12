@@ -1,0 +1,24 @@
+[
+    {
+        "dniCliente": "0501-2000-12345",
+        "nombreCompleto": "Juan Perez",
+        "montoSolicitado": 15000,
+        "plazoMeses": 12
+    },
+    
+    
+    {
+        "dniCliente": "0801-1995-54321",
+        "nombreCompleto": "Maria Fernanda Lopez",
+        "montoSolicitado": 45000,
+        "plazoMeses": 24,
+        "tasaInteres": 4.2
+    }
+    
+
+
+
+
+
+
+]
