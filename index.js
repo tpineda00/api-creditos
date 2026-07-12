@@ -1,8 +1,6 @@
 import express from "express"
-import solicitudRoutes from './routes/solicitudes.routes.js'
-
-import { requestLogger, errorHandler } from './middleware/global.middleware.js'
-
+import solicitudRoutes from './src/routes/solicitudes.routes.js'
+import { requestLogger, errorHandler } from './src/middleware/global.middleware.js'
 const app = express()
 
 app.use(express.json())
@@ -14,7 +12,7 @@ app.use(requestLogger)
 
 //Rutas del negocio
 
-app.use('api/solicitudes', solicitudRoutes)
+app.use('/api/solicitudes', solicitudRoutes)
 
 //Registrar el manejo de errores
 
