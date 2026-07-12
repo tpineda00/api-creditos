@@ -2,7 +2,8 @@ import express from "express";
 import * as solicitudesController from "../controllers/solicitudes.controller.js";
 
 // Middlewares y esquemas
-import validate from "../middleware/validate.js";
+import { validate } from "../middleware/validate.js";
+
 import {
     crearSolicitudSchema,
     actualizarSolicitudSchema,
