@@ -2,12 +2,12 @@ import express from "express";
 import * as solicitudesController from "../controllers/solicitudes.controller.js";
 
 // Middlewares y esquemas
-import validate from "../middlewares/validate.js";
+import validate from "../middleware/validate.js";
 import {
     crearSolicitudSchema,
     actualizarSolicitudSchema,
     estadoSchema
-} from "../schemas/solicitud.schema.js";
+} from "../schemas/solicitud.schemas.js";
 
 const router = express.Router();
 
